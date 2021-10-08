@@ -7,8 +7,8 @@ public class URI1001 {
         int a = inp.nextInt();
         int b = inp.nextInt();
 
-        int s = a + b;
+        int x = a + b;
 
-        System.out.println("X = " + s);
+        System.out.println("X = " + x);
     }
 }
