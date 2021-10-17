@@ -9,7 +9,7 @@ public class Problem06 {
 
         double p = (9.0 / 5) * c + 32;
 
-        System.out.printf("%.0f Celsius is %.1f Fahrenheit %.1f%n",c,p);
+        System.out.printf("%.0f Celsius is %.1f Fahrenheit\n",c,p);
     }
 }
 

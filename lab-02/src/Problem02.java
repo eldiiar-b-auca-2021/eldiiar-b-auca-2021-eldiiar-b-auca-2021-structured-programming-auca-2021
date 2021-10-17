@@ -5,16 +5,16 @@ public class Problem02 {
         Scanner inp = new Scanner(System.in);
 
         System.out.printf("1st value? ");
-        int c = inp.nextInt();// 2
+        int c = inp.nextInt();
 
         System.out.printf("2nd value? ");
-        int d = inp.nextInt();// 3
+        int d = inp.nextInt();
 
-        System.out.printf("Before swapping: a = %d; b = %d;%n", c, d);// 2 3
-        c = c + d; // 2 = \2 + 3 = 5\
-        d = c - d; // 3 = \5 - 3 = 2\
-        c = c - d; // 5 = \5 - 2 = 3\
-        System.out.printf("After swapping: a = %d; b = %d;\n", c, d);
+        System.out.printf("Before swapping: a = %d; b = %d;%n",c,d);
+        c = c + d;
+        d = c - d;
+        c = c - d;
+        System.out.printf("After swapping: a = %d; b = %d;\n",c,d);
     }
 }
 
