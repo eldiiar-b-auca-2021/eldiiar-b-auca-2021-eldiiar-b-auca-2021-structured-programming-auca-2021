@@ -14,6 +14,6 @@ public class Problem01 {
         int t = a;
         a = b;
         b = t;
-        System.out.printf("After swapping: a = %d; b = %d;\n", a, b);
+        System.out.printf("After swapping: a = %d; b = %d;\n",a, b);
     }
 }
