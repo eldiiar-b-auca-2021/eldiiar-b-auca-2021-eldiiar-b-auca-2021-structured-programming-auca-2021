@@ -1,15 +1,19 @@
 import java.util.Scanner;
 
 public class Problem04 {
+
+    static final double CENTIMETERS_PER_INCH = 2.54;
+
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
         System.out.print("Length in inches? ");
 
-        double b = inp.nextDouble();
-        double d = 2.54 * b;
+        double inches = inp.nextDouble();
 
-        System.out.printf("%.0f in. = %.2f cm.\n",b,d);
+        double centimeters = CENTIMETERS_PER_INCH * inches;
+
+        System.out.printf("%.2f in. = %.2f cm.\n",inches,centimeters);
 
     }
 }
