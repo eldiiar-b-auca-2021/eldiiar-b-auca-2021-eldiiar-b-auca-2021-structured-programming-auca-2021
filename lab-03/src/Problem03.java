@@ -13,19 +13,19 @@ public class Problem03 {
 
         if (firstNumber > secondNumber) {
             if (firstNumber > thirdNumber) {
-                System.out.printf("The value %d is the greatest one.", firstNumber);
+                System.out.printf("The value %d is the greatest one.\n", firstNumber);
             }
         }
 
                 if (secondNumber > firstNumber) {
                     if (secondNumber > thirdNumber) {
-                        System.out.printf("The value %d is the greatest one.", secondNumber);
+                        System.out.printf("The value %d is the greatest one.\n", secondNumber);
 
             }
         }
                 if (thirdNumber > firstNumber) {
                     if (thirdNumber > secondNumber) {
-                        System.out.printf("The value %d is the greatest one.", thirdNumber);
+                        System.out.printf("The value %d is the greatest one.\n", thirdNumber);
                     }
                 }
     }
