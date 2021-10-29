@@ -6,15 +6,11 @@ public class URI1009 {
 
         String sellerName = inp.nextLine();
 
-        System.out.println(sellerName);
+        double fixedSalary = inp.nextDouble();
+        double soldProducts = inp.nextDouble();
+        double bonus = soldProducts * 0.15;
+        double result = bonus + fixedSalary;
 
-        double a = inp.nextDouble();
-        double b = inp.nextDouble();
-
-        double c = b * 15;
-        double f = c / 100;
-        double g = f + a;
-
-        System.out.printf("TOTAL = R$ %.2f\n", g);
+        System.out.printf("TOTAL = R$ %.20f\n",result);
     }
 }
