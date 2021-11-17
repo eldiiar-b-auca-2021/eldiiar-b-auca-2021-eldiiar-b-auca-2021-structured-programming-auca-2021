@@ -12,6 +12,8 @@ public class Problem01 {
         x += 0.1;
         x += 0.1;
         x += 0.1;
+        double a = (x - 1.0);
+
 
         if (Math.abs(x - 1.0) < 1E-10) {
            System.out.println("Ok");
