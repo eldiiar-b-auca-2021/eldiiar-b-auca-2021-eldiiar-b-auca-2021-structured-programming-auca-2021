@@ -4,10 +4,10 @@ public class Problem01 {
     public static void main(String[] args) {
         Scanner inp = new Scanner(System.in);
 
-        System.out.printf("1st value? ");
+        System.out.print("1st value? ");
         int a = inp.nextInt();
 
-        System.out.printf("2nd value? ");
+        System.out.print("2nd value? ");
         int b = inp.nextInt();
 
         System.out.printf("Before swapping: a = %d; b = %d;%n",a,b);
