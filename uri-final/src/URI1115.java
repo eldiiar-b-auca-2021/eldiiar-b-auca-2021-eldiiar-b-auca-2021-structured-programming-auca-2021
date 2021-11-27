@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class URI1115 {
+    public static void main(String[] args) {
+        Scanner inp = new Scanner(System.in);
+
+
+        int x = 0;
+        int y = 0;
+
+
+        while ((( x = inp.nextInt()) != 0) && (0 != ( y = inp.nextInt()))) {
+
+            if (x > 0 && y > 0) {
+                System.out.println("primeiro");
+            } else if (x < 0 && y > 0) {
+                System.out.println("segundo");
+            } else if (x < 0 && y < 0) {
+                System.out.println("terceiro");
+            } else if (x > 0 && y < 0) {
+                System.out.println("quarto");
+            }
+        }
+    }
+}
