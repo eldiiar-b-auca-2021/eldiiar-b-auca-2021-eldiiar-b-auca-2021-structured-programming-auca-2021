@@ -8,33 +8,26 @@ public class URI1099 {
         int x;
         int y;
         int sumOfNumbers = 0;
-
+        int swap;
         for (int i = 1; i <= numberOfLoop; i++) {
             x = inp.nextInt();
             y = inp.nextInt();
 
             if (y > x) {
+                swap = x;
+                x = y;
+                y = swap;
+            }
 
-                for (int j = x; j < y; j++) {
-                    if (j % 2 != 0) {
-                        sumOfNumbers += j;
-                    }
-                }
-            } else if (x > y){
-
-                for (int k = y; k < x; k++) {
-                    if (k % 2 != 0) {
-                        sumOfNumbers += k;
-                    }
+            for (int j = y+1; j < x; j++) {
+                if (j % 2 != 0) {
+                    sumOfNumbers += j;
                 }
 
-            } else {
-                sumOfNumbers+=0;
+
             }
             System.out.println(sumOfNumbers);
+            sumOfNumbers = 0;
         }
-
-
-
     }
 }
