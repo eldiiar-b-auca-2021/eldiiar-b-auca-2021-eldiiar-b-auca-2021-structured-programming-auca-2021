@@ -2,24 +2,22 @@ import java.util.Scanner;
 
 public class URI1117 {
     public static void main(String[] args) {
+
         Scanner inp = new Scanner(System.in);
 
-        double input;
+        double input = 0;
         double num = 0;
         double average = 0;
-        double incorrectNum = 0;
-        for (int i = 1; i <= 4; i++) {
+
+        while (average != 2) {
             input = inp.nextDouble();
-            if (input <= 10 && input >= 0) {
+            if (input >= 0 && input <= 10) {
                 num += input;
                 average++;
-            } else {
-               incorrectNum++;
+            } else  {
+                System.out.println("nota invalida");
             }
         }
-        for (int j = 1; j <= incorrectNum; j++) {
-            System.out.println("nota invalida");
-        }
-        System.out.printf("media = %.2f\n", num / average);
+        System.out.printf("media = %.2f\n", num / 2);
     }
 }
