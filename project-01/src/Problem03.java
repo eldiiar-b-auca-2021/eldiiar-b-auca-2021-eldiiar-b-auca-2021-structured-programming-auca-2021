@@ -1,40 +1,71 @@
-
 import processing.core.*;
 
 public class Problem03 extends PApplet {
-    static final float RECT_WIDTH = 400;
+    static final float RECT_WIDTH = 200;
     static final float RECT_HEIGHT = 200;
 
     public void settings() {
-        fullScreen ();
+        fullScreen();
+
     }
 
     public void setup() {
-        textSize(40);
-
-        frameRate(30);
+        textSize(50f);
     }
 
     public void draw() {
         background(0, 0, 0);
+        float rectWidth = (width/2f) - 400;
+        float rectHeight = (height/2f) - 300;
 
-        float rectTopLeftX = width / 2f - RECT_WIDTH / 2f;
-        float rectTopLeftY = height / 2f - RECT_HEIGHT / 2f;
+        float secondRectWidth = (width/2f) - 400;
+        float secondRectHeight = (height/2f) - 200;
 
-        fill(0, 0, 255);
-        rect(rectTopLeftX, rectTopLeftY, RECT_WIDTH, RECT_HEIGHT);
+        float thirdRectWidth = (width/2f) - 400;
+        float thirdRectHeight = (height/2f) - 100;
 
-        fill (0, 0, 100);
-        ellipse(mouseX, mouseY, 100,100);
+        fill(0,0,250);
+        rect(rectWidth,rectHeight,800,100);
+        fill(255,255,255);
+        text("    Java Programming Language",rectWidth,rectHeight,800,100);
 
-        fill (255, 255, 0);
-        text("mouseX: " + mouseX, width / 2f, height / 2f);
-        text("mouseY: " + mouseY, width / 2f, height / 2f - height / 30f);
+        fill(0,0,250);
+        rect(secondRectWidth,secondRectHeight,800,100);
+        fill(255,255,255);
+        text("    Kotlin Programming Language", secondRectWidth,secondRectHeight,800,100 );
 
-        if (rectTopLeftX <= mouseX && mouseX <= rectTopLeftX + RECT_WIDTH &&
-        rectTopLeftY <= mouseY && mouseY <= rectTopLeftY + RECT_HEIGHT) {
-            fill(255,255,255);
-            text("mouseX: " + mouseX, width / 2f, height / 2f);
+        fill(0,0,250);
+        rect(thirdRectWidth,thirdRectHeight,800,100);
+
+        fill(255,255,255);
+        text("    Scala Programming Language",thirdRectWidth,thirdRectHeight,800,100);
+
+        int x = mouseX;
+        int y = mouseY;
+        if (mouseX >= rectWidth && mouseX <= rectWidth+800 &&
+                mouseY >= rectHeight && mouseY <= rectHeight+100) {
+            fill(255,0,0);
+            text("    Java Programming Language",rectWidth,rectHeight,800,100);
+
+
+            fill (255,204,0);
+            text("Year: 1995.PYPL Index:2",rectWidth+200,rectHeight+600);
+
+        } else if (mouseX >= secondRectWidth && mouseX <= secondRectHeight+800 &&
+                mouseY>=secondRectHeight && mouseY <= secondRectHeight + 100) {
+            fill(255,0,0);
+            text("    Kotlin Programming Language", secondRectWidth,secondRectHeight,800,100 );
+
+            fill(255,204,0);
+            text("Year:2011.PYPL Index:11",rectWidth+200,rectHeight+600);
+
+        } else if (mouseX >= thirdRectWidth && mouseX <= thirdRectWidth+800 &&
+                mouseY >= thirdRectHeight && mouseY <= thirdRectHeight+100) {
+            fill(255,0,0);
+            text("    Scala Programming Language",thirdRectWidth,thirdRectHeight,800,100);
+
+            fill(255,204,0);
+            text("Year:2004.PYPL Index:20",rectWidth+200,rectHeight+600);
         }
 
     }
@@ -44,4 +75,3 @@ public class Problem03 extends PApplet {
     }
 
 }
-
