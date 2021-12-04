@@ -6,8 +6,8 @@ public class URI1142 {
 
         int number = inp.nextInt();
 
-        for (int i = 1; i <= number; i += 4) {
-            System.out.println(i + " " + i+1 + " " + i+2);
+        for (int i = 1; i < number*4; i+=4) {
+            System.out.println(i + " " + (i + 1) + " " + (i + 2) + " PUM");
         }
     }
 }
