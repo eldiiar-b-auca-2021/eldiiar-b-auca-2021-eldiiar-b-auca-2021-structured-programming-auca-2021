@@ -11,17 +11,25 @@ public class Problem04 extends PApplet {
     }
 
     public void setup() {
-
-        circleX = width / 2f;
-        circleY = height / 2f;
-        circleR = height / 20f;
+         //stroke(0,0,255);
+        circleX = 1000 / 2f;
+        circleY = 800 / 2f;
+        circleR = 800 / 20f;
         frameRate(10);
     }
 
     public void draw() {
-       //background(0,0,0);
-        fill(255,0,0);
-        line(1,200,width,height-900);
+        background(0,0,0);
+        stroke(0,0,255);
+
+
+        for (int i = 0; i < 550; i+=40) {
+
+            fill(255, 0, 0);
+            line(100, 100 + i, width - 100 , height - 700 + i);
+        }
+        line(100, 600, width - 100, height-200);
+
         fill(0,0,0,50);
         rect(0,0,width,height);
 
