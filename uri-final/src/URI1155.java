@@ -5,6 +5,6 @@ public class URI1155 {
         for (double i = 1; i <= 100; i++){
              sum += (1/i);
         }
-        System.out.printf("%.2f",sum);
+        System.out.printf("%.2f\n",sum);
     }
 }
