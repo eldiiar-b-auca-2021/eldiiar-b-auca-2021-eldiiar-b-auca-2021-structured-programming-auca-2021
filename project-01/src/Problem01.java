@@ -29,18 +29,20 @@ public class Problem01 extends PApplet {
         text ("Hello, processing!!!",width/2f,height/2f);
         MESSAGE+=changeSize;
 
+        if ( MESSAGE >= MAX_BORDER || MESSAGE <= MIN_BORDER ) {
+            changeSize *= -1;
+
+
+        }
         if (MESSAGE <= MIN_BORDER) {
-            changeSize += 2;
+            temp = colorRed;
+            colorRed = colorGreen;
+            colorGreen = temp;
 
             temp = colorRed;
             colorRed = colorBlue;
             colorBlue = temp;
-        }
-        if (MESSAGE >= MAX_BORDER) {
-            changeSize -= 2;
-            temp = colorRed;
-            colorRed = colorGreen;
-            colorGreen = temp;
+
         }
 
     }
