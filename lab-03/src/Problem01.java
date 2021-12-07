@@ -10,7 +10,7 @@ public class Problem01 {
         double r = x;
         if (r < 0) {
             r = -r;
-            System.out.println("Negate");
+
         }
 
         System.out.printf("|%.4f| = %.4f\n", x, r);
