@@ -15,11 +15,11 @@ public class Problem02 extends PApplet {
         x1 = width/2f;
         y1 = height/2f;
 
-        x2 = (width/2f+35f);
-        y2 = (height/2f+35f);
+        x2 = (width/2f+45f);
+        y2 = (height/2f+20f);
 
-        x3 = (width/2f-35f);
-        y3 = (height/2f-35f);
+        x3 = (width/2f-45f);
+        y3 = (height/2f-20f);
 
         speedX1 = random(-10,10);
         speedY1 = random(-10,10);
@@ -33,6 +33,7 @@ public class Problem02 extends PApplet {
     public void draw() {
         background(0, 0, 0);
 
+        noStroke();
         fill(255,0,0);
         circle(x3,y3,50);
 
