@@ -13,14 +13,8 @@ public class Problem01 {
         System.out.print("Coordinate of 2nd point: ");
         int secondPoint = inp.nextInt();
 
-        int result = firstPoint - coordinate;
-        int secondResult = secondPoint - coordinate;
-
-        if (result < 0) {
-            result = -result;
-        } else if (secondResult < 0) {
-            secondResult = -secondResult;
-        }
+        int result = auAbs(coordinate, firstPoint);
+        int secondResult = auAbs(coordinate, secondPoint);
 
         if (result < secondResult) {
             System.out.println("1st point is closer. Distance " + result);
@@ -29,5 +23,13 @@ public class Problem01 {
         } else {
             System.out.println("distance is the same. It is " + result);
         }
+    }
+
+    private static int auAbs(int coordinate, int firstPoint) {
+        int result = firstPoint - coordinate;
+        if (result < 0) {
+            result = -result;
+        }
+        return result;
     }
 }
