@@ -2,13 +2,19 @@ import processing.core.*;
 
 public class Problem04 extends PApplet {
     float x,y,r;
-    float a,b,c,d;
+    float a,b,c,d,x2,y2,r2;
+    int score = 0;
     public void settings() {
         fullScreen();
     }
 
     public void setup() {
         frameRate(10);
+        textSize(50);
+        x2 = width/4f+25;
+        y2 = height /4f+25;
+        r2 = 50f;
+
          x = width/4f+25;
          y = height /4f+25;
          r = 50f;
@@ -22,8 +28,12 @@ public class Problem04 extends PApplet {
     }
 
     public void draw() {
-        fill(0,0,0,100);
+        fill(0,0,0,50);
         rect(0,0,width,height);
+        noStroke();
+        fill(0,255,0);
+        text ("Game: Yellow Circles using Arrow Buttons",width/2f-430,height/6f);
+        text("Score: " + score, width/2f -100,height-50);
         stroke(0,0,255);
         fill(0,0,255);
         for (int i = 0;i<=500;i+=50) {
@@ -68,6 +78,27 @@ public class Problem04 extends PApplet {
         }
         if (y >= (height/4f+500)) {
             y = d;
+        }
+
+        fill(255,255,0);
+        circle(x2,y2,r2);
+        if (x == x2 && y == y2) {
+            x2 += 50;
+            y2 += 50;
+            score++;
+
+        }
+        if (x2 <=  (width / 4f) ) {
+            x2 = a;
+        }
+        if (x2 >= (width / 4f + 800)) {
+            x2 = b;
+        }
+        if (y2 <= (height/4f+25)) {
+            y2 = c;
+        }
+        if (y2 >= (height/4f+500)) {
+            y2 = d;
         }
 
 
