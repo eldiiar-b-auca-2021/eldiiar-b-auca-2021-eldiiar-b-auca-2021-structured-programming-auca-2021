@@ -1,66 +1,78 @@
 import processing.core.*;
 
 public class Problem04 extends PApplet {
-
-    float circleX;
-    float circleY;
-    float circleR;
+    float x,y,r;
+    float a,b,c,d;
     public void settings() {
-
-        size(1000, 800);
+        fullScreen();
     }
 
     public void setup() {
-        textSize(30);
-        circleX = 1000 / 2f;
-        circleY = 800 / 2f;
-        circleR = 800 / 20f;
         frameRate(10);
+         x = width/4f+25;
+         y = height /4f+25;
+         r = 50f;
+
+         a = width/4f+25;
+         b = width/4f + 775;
+
+         c = height/4f+25;
+         d = height/4f+475;
+
     }
 
     public void draw() {
-        fill(0,255,0);
-       text ("Game: Collect Yellow Circles using Arrow Buttons",200,50);
-       text("Score: ", 400, 750);
-
-        stroke(0,0,255);
-
-        for (int i = 0; i < 550; i+=40) {
-
-            fill(255, 0, 0);
-            line(120, 100 + i, width - 120 , height - 700 + i);
-        }
-        for(int j = 0; j < 800; j+=40) {
-            fill (255,0,0);
-            line(121+j,100,width-879+j,height-180);
-        }
-
-        //line(100, 600, width - 100, height-200);
-        noStroke();
         fill(0,0,0,100);
         rect(0,0,width,height);
+        stroke(0,0,255);
+        fill(0,0,255);
+        for (int i = 0;i<=500;i+=50) {
+            fill(0,0,255);
+            line(width / 4f, height / 4f+i, width / 4f + 800f, height / 4f+i);
+        }
+        for (int j = 0; j<=800; j+=50) {
+            fill(0,0,255);
+            line (width / 4f+j, height / 4f, width / 4f + j , height / 4f + 500);
+        }
 
-        fill(255,0,0);
-        circle(circleX,circleY,circleR);
+        noStroke();
         frameRate(5);
+        fill(255,0,0);
+        circle (x, y, r);
+
         if (key == CODED) {
             switch (keyCode) {
                 case UP:
-                    circleY -= circleR;
-                    break;
+                  y-=r;
+                  break;
                 case DOWN:
-                    circleY += circleR;
-                    break;
-                case RIGHT:
-                    circleX += circleR;
+                    y+=r;
                     break;
                 case LEFT:
-                    circleX -= circleR;
+                    x -= r;
                     break;
+                case RIGHT:
+                    x += r;
+                    break;
+
             }
         }
+        if (x <= (width / 4f) ) {
+            x = a;
+        }
+        if (x >= (width/4f + 800)) {
+            x = b;
+        }
+        if (y <= (height/4f+25)) {
+            y = c;
+        }
+        if (y >= (height/4f+500)) {
+            y = d;
+        }
 
-    }
+
+            }
+
 
     public static void main(String[] args) {
         PApplet.main("Problem04");
