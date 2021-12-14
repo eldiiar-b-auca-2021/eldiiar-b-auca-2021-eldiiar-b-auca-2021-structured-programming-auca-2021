@@ -6,12 +6,13 @@ public class URI1146 {
 
         int anyNum;
 
-        do  {
-            anyNum = inp.nextInt();
-            for (int i = 1; i <= anyNum; i++) {
+        while ((anyNum = inp.nextInt()) != 0){
+            for (int i = 1; i < anyNum; i++) {
                 System.out.print(i + " ");
             }
+            System.out.print(anyNum);
+            System.out.println();
 
-        } while (anyNum != 0);
+        }
     }
 }
