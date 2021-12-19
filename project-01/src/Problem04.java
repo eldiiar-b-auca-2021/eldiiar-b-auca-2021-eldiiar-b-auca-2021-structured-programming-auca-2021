@@ -42,11 +42,11 @@ public class Problem04 extends PApplet {
         }
         for (int j = 0; j<=800; j+=50) {
             fill(0,0,255);
-            line (width / 4f+j, height / 4f, width / 4f + j , height / 4f + 500);
+            line (width / 4f+j, height / 4f, width / 4f + j, height / 4f +500);
         }
 
         noStroke();
-        frameRate(5);
+        frameRate(10);
         fill(255,0,0);
         circle (x, y, r);
 
@@ -83,8 +83,10 @@ public class Problem04 extends PApplet {
         fill(255,255,0);
         circle(x2,y2,r2);
         if (x == x2 && y == y2) {
-            x2 += 50;
-            y2 += 50;
+            x2 = x2 + r + 100 * ((int) random(0,20));
+            y2 = y2 + r + 100 * ((int) random(0,20));
+            x2 = x2 + r - 100 * ((int) random(0,20));
+            y2 = y2 + r - 100 * ((int) random(0,20));
             score++;
 
         }
