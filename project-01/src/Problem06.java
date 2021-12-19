@@ -131,7 +131,7 @@ public class Problem06 extends PApplet {
         translate(380,0);
 
 
-        float rad4 = 1,radiusOfMoon = 30, red4 = 0, green4 = 0, blue4 = 0, color4 = 1f;
+        float rad4 = 1,radiusOfMoon = 30, red4 = 0, green4 = 0, blue4 = 0, color4 = 4f;
         rotate(gamma);
         gamma += 0.05f;
         noStroke();
@@ -143,6 +143,7 @@ public class Problem06 extends PApplet {
             blue4+=color4;
             radiusOfMoon-=rad4;
         }
+        noStroke();
         if (mouseX >= firstPointOfWidth && mouseX <= width - 50 &&
                 mouseY >= 200 && mouseY <= 250) {
             noFill();
