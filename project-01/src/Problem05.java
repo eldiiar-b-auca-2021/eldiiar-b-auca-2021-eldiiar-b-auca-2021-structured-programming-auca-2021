@@ -19,14 +19,14 @@ public class Problem05 extends PApplet {
         column = -1;
         color = "No Color";
         try {
-            String strRadius = JOptionPane.showInputDialog("Radius [10, 300]: ");
+            String strRadius = JOptionPane.showInputDialog("Radius [4, 12]: ");
             radius = Float.parseFloat(strRadius);
             //JOptionPane.showMessageDialog(null,"Hello" );
         }catch(NumberFormatException e) {
             JOptionPane.showMessageDialog(null,"Incorrect number" );
             System.exit(1);
         }
-         if (radius < 10 || radius > 300) {
+         if (radius < 4 || radius > 12) {
             JOptionPane.showMessageDialog(null,"Incorrect number" );
             System.exit(1);
         }
@@ -35,6 +35,7 @@ public class Problem05 extends PApplet {
         background(0,0,0);
         fill(255,255,0);
         text("Row:"+row+" Column: "+column+"  Color: "+color,width/2f-200,50);
+
         fill(0,0,0);
         stroke (255,255,255);
         rect(x, y, BOARD_SIZE, BOARD_SIZE);
