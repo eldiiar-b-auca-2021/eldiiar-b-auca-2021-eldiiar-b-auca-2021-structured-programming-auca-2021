@@ -83,10 +83,10 @@ public class Problem04 extends PApplet {
         fill(255,255,0);
         circle(x2,y2,r2);
         if (x == x2 && y == y2) {
-            x2 = x2 + r + 100 * ((int) random(0,20));
-            y2 = y2 + r + 100 * ((int) random(0,20));
-            x2 = x2 + r - 100 * ((int) random(0,20));
-            y2 = y2 + r - 100 * ((int) random(0,20));
+            x2 = x2 + r2 + 100 * ((int) random(0,20));
+            y2 = y2 + r2 + 100 * ((int) random(0,20));
+            x2 = x2 + r2 - 100 * ((int) random(0,20));
+            y2 = y2 + r2 - 100 * ((int) random(0,20));
             score++;
 
         }
