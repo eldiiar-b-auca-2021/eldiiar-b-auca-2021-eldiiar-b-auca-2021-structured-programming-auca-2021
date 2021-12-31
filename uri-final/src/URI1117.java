@@ -5,7 +5,7 @@ public class URI1117 {
 
         Scanner inp = new Scanner(System.in);
 
-        double input = 0;
+        double input;
         double num = 0;
         double average = 0;
 

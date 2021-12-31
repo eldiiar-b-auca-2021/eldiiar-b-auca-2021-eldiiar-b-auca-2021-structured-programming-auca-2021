@@ -12,7 +12,7 @@ public class URI1133 {
            y = x;
            x = temp;
         }
-        for (int i = x+1; i < y; i++ ) {
+        for (int i = x+1; i < y; i++ ){
             if (i % 5 == 2 || i % 5 == 3) {
                 System.out.println(i);
             }

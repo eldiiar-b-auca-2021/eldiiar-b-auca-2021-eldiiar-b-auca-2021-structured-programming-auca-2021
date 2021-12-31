@@ -10,7 +10,6 @@ public class Problem03 {
             case 12:
             case 1:
             case 2:
-
                 System.out.println("Winter");
                 break;
             case 3:

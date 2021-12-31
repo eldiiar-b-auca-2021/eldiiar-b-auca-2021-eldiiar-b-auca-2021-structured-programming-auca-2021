@@ -36,8 +36,8 @@ public class Problem03 extends PApplet {
             if (i % 2 == 1) {
                 curR /= 4;
             }
-            x = curR * cos(alpha);
-            y = curR * sin(alpha);
+           x = curR * cos(alpha);
+           y = curR * sin(alpha);
             line (0,0,x,y);
 
 

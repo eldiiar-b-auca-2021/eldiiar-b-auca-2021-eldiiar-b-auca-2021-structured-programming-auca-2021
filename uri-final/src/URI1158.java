@@ -9,7 +9,7 @@ public class URI1158 {
        while (i < testCases) {
            x = inp.nextInt();
            y = inp.nextInt();
-           for (j = x; k < y; x++) {
+           for (j= x; k < y; x++) {
                if (x%2 != 0) {
                    sum+=x;
                    k++;

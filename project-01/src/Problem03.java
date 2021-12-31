@@ -24,6 +24,9 @@ public class Problem03 extends PApplet {
         float thirdRectWidth = (width/2f) - 400;
         float thirdRectHeight = (height/2f) - 100;
 
+        float fourthRectWidth = (width/2f) -400;
+        float fourthRectHeight = (height/2f);
+
         fill(0,0,250);
         rect(rectWidth,rectHeight,800,100);
         fill(255,255,255);
@@ -40,6 +43,11 @@ public class Problem03 extends PApplet {
         fill(255,255,255);
         text("    Scala Programming Language",thirdRectWidth,thirdRectHeight,800,100);
 
+        fill(0,0,255);
+        rect (fourthRectWidth,fourthRectHeight,800,100);
+
+        fill(255,255,255);
+        text ("    Python Programming Language",fourthRectWidth,fourthRectHeight,800,100);
         int x = mouseX;
         int y = mouseY;
         if (mouseX >= rectWidth && mouseX <= rectWidth+800 &&
@@ -66,6 +74,13 @@ public class Problem03 extends PApplet {
 
             fill(255,204,0);
             text("Year:2004.PYPL Index:20",rectWidth+200,rectHeight+600);
+        } else if (mouseX >= fourthRectWidth && mouseX <= fourthRectWidth + 800 &&
+        mouseY >= fourthRectHeight && mouseY <= fourthRectHeight+100) {
+            fill(255,0,0);
+            text("    Python Programming Language", fourthRectWidth, fourthRectHeight,800,100);
+
+            fill(255,255,0);
+            text("Year: 1998. ", width/2f-100, height-60);
         }
 
     }

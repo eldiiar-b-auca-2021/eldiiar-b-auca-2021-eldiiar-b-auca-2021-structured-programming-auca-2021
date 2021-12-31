@@ -42,3 +42,10 @@ public class Problem05 {
 
         }
     }
+
+  //      * if(month==2){
+  //      *   if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+  //      *       sout(29)
+  //      *   }else{sout(28)
+  //      * } else if(
+    //    * */
